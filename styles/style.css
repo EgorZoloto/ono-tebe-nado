@@ -1,20 +1,16 @@
 /* HEADER */
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    padding: 92px 0px 96px 0px;
+    padding: 92px 50px 93px 50px;
+    display: grid;
+    grid-template-columns: 1fr 135px 1fr;
+    align-items: center;
 }
 
-.nav,
-.contacts-wrap {
-    max-width: 391px;
-    width: 100%;
-}
 
-.contacts-wrap {
-    display: flex;
-    justify-content: end;
+.nav {
+    letter-spacing: .2px;
+    padding-top: 0.7px;
 }
 
 .nav,
@@ -24,9 +20,14 @@
     gap: 12px;
 }
 
+.nav_link {
+    gap: 13px
+}
+
 .nav_link__active,
 .nav_link:hover {
     text-decoration: none;
+    letter-spacing: 0;
 }
 
 .nav_link:after {
@@ -45,47 +46,69 @@
 }
 
 .logo {
-    width: 129px;  
+    display: block; 
 }
 
-.logo-img {
-
+.contacts-wrap {
+    display: flex;
+    justify-content: end;
 }
 
 .contacts {
     width: 100%;
-    max-width: 237px;
+    max-width: 240px;
     display: flex;
     flex-direction: column;
+    line-height: 24.3px;
+}
+
+a.contacts-item {
+    letter-spacing: .2px;
 }
 
 /* END-HEADER */
 /* SECTION MAIN */
 
 .section-main {
-    background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)),  url("../images/cover.jpg");
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)),  
+        url("../images/cover.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     padding: 165px 50px 50px 50px;
  }
 
-.main_title {
+.main-title {
     color: #fff;
     font-size: 100px;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 23px;
-    line-height: 115px;
+    letter-spacing: 29px;
 }
 
-.main_title__middle {
-    text-align: center;
-    padding-right: 47px; 
+.main-title_row {
+    display: flex;
+    gap: 31px;
 }
 
-.main_title__bottom {
-    text-align: right;
-    margin-bottom: 135px;
+.main-title_row__top {
+    line-height: 118.4px;
+}
+
+.main-title_row__middle {
+    justify-content: center;
+    padding-right: 57px;
+    line-height: 136px; 
+}
+
+.main-title_row__bottom {
+    justify-content: end;
+    margin-bottom: 130px;
+    line-height: 106px;
+}
+
+.last-letter {
+    letter-spacing: normal;
 }
 
 .slogan {
@@ -103,13 +126,13 @@
 }
 
 .button {
-background-color: transparent;
-font-size: 22px;
-color: #fff;
-text-transform: uppercase;
-border: solid #fff 1px;
-padding: 12px 30px;
-transition: 0.2s;
+    background-color: transparent;
+    font-size: 22px;
+    color: #fff;
+    text-transform: uppercase;
+    border: solid #fff 1px;
+    padding: 12px 30px;
+    transition: 0.2s;
 }
 
 .button:hover {
@@ -117,6 +140,195 @@ transition: 0.2s;
     color: #000;
 }
 
-.footer {
-    height: 500px;
+/* END SECTION MAIN */
+/* SECTION LOTS */
+
+.lots {
+    padding: 182px 24px 181px 24px;
 }
+
+.title {
+    text-transform: uppercase;
+    font-size: 40px;
+    line-height: 47px;
+    font-weight: bold;
+}
+
+.lots_title {
+    padding: 0 0 25px 40px;
+}
+
+.lots_card-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.lots_card-list_item {
+    width: 100%;
+}
+
+.card-link {
+    text-decoration: none;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    background-color: red;
+    padding: 51px 40px 50px 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -102px 0px;
+    position: relative;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, .6);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+}
+
+.card_type_film {
+    background-image: url(../images/card-lot-01.jpg);
+
+}
+
+
+.card_type_book {
+    background-image: url(../images/card-lot-02.jpg);
+}
+
+.card_type_picture {
+    background-image: url(../images/card-lot-03.jpg);
+}
+
+.card_title {
+    font-size: 22px;
+    line-height: 26px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+    position: relative;
+}
+
+.card_text {
+    font-size: 20px;
+    line-height: 24px;
+    color: #fff;
+    position: relative;
+}
+
+.card_text strong {
+    font-weight: normal;
+    letter-spacing: .2px;
+}
+
+.lots__look-more-link {
+    padding-left: 40px;
+    font-size: 20px;
+}
+
+
+/* SECTION LOTS END */
+/* SECTION ABOUT */
+
+
+.about {
+    padding: 0 24px 180px 24px;
+    display: grid;
+    grid-template-columns: 31.8% auto;
+    gap: 0 24px
+}
+
+.about_cell {
+    display: grid;
+}
+
+.about_title {
+    align-self: center;
+    padding-top: 9px;
+}
+
+.about_logo {
+    display: flex;
+    width: 240px;
+    height: 240px;
+    background-color: #000;
+    border-radius: 50%;
+    padding: 45px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.about_text {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: .1px;
+    margin-bottom: 17px;
+    padding-top: 7px;
+}
+
+.about_text:last-child {
+    margin-bottom: 0;
+    letter-spacing: 0;
+}
+
+/* section about end */
+/* footer */ 
+
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    padding: 0 51px 88px 50px;
+}
+
+.footer .nav {
+    flex-direction: column;
+    gap: 0;
+}
+
+.footer .nav_link:after {
+    display: none;
+}
+
+.footer_social-list {
+    display: flex;
+    justify-content: end;
+    gap: 48px;
+}
+
+.footer_social-link {
+    width: 100%;
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 48px;
+}
+
+.footer_social-link-yt {
+    background-image: url(../images/yt.svg);
+}
+
+.footer_social-link-vk {
+    background-image: url(../images/vk.svg);
+}
+
+.footer_social-link-pt {
+    background-image: url(../images/pinterest.svg);
+}
+
+/* THE END */
