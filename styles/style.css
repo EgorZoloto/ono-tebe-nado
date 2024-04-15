@@ -49,7 +49,7 @@
     display: block; 
 }
 
-.contacts-wrap {
+.address-wrap {
     display: flex;
     justify-content: end;
 }
@@ -257,6 +257,10 @@ a.contacts-item {
     display: grid;
 }
 
+.about_cell__last {
+    grid-column-start: 2;
+}
+
 .about_title {
     align-self: center;
     padding-top: 9px;
@@ -280,7 +284,7 @@ a.contacts-item {
     letter-spacing: .1px;
     margin-bottom: 17px;
     padding-top: 7px;
-}
+   }
 
 .about_text:last-child {
     margin-bottom: 0;
